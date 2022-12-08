@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using WebApplication8.Models;
 
-namespace WebApplication8.Controllers
+namespace WebApplication8.Controllers 
 {
     public class HomeController : Controller
     {
