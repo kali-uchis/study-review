@@ -7,7 +7,7 @@ namespace WebApplication8.Controllers
     public class HomeController : Controller
     {
 
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> _logger; 
         static string adminId = "admin@gmail.com";
         static string adminPass = "123";
 
