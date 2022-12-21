@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MySqlConnector;
+using WebApplication8.Models;
 
 namespace WebApplication8.Controllers
 {
@@ -13,5 +15,17 @@ namespace WebApplication8.Controllers
         {
             return View();
         }
+
+        public  IActionResult ShowUsers()
+        {
+            //Database call to get the list of available users
+            ViewBag.usersList = userData.userList;
+            //Console.WriteLine(userData.userList);
+            return View();
+   
+        }
+
+
+
     }
 }

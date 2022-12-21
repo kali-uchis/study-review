@@ -11,6 +11,10 @@
         @Html.TextAreaFor(u => u.email);
         Password:
         @Html.TextAreaFor(u => u.password);
+        Role:
+        @Html.DropDownListFor(m => m.role, 
+            new SelectList(Enum.GetValues(typeof(user.roles))), 
+            "Select Role")
         <input type="submit" value="Submit" />
     </form>
 }

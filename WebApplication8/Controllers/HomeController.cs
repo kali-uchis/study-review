@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
+using System.Collections.Generic;
 using System.Diagnostics;
 using WebApplication8.Models;
 
@@ -8,13 +10,9 @@ namespace WebApplication8.Controllers
     {
 
         private readonly ILogger<HomeController> _logger; 
-        static string adminId = "admin@gmail.com";
-        static string adminPass = "123";
 
-        static string customerId = "cust@gmail.com";
-        static string customerPass = "1234";
 
-        static IList<user> userList = new List<user>();
+       // static user currentUser = new user();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -29,9 +27,9 @@ namespace WebApplication8.Controllers
         public IActionResult AddUser(user userDetails)
         {
             
-            userList.Add(userDetails);
+            userData.userList.Add(userDetails);
 
-            return RedirectToAction("Login");
+            return RedirectToAction("ShowUsers", "Admin");
         }
 
         public IActionResult Login()
@@ -41,25 +39,22 @@ namespace WebApplication8.Controllers
 
         public IActionResult CheckCredentials(login inputDetails)
         {
-            ;
-            //inputDetails.loginId = loginId;
-           // inputDetails.password = password;
-            Console.WriteLine("Input : ", inputDetails);
-            if (inputDetails.loginId == adminId && inputDetails.password == adminPass)
-            {
-                return RedirectToAction("adminIndex", "Admin", new { name = "CEO" });
-            }
-
             
-            else if (inputDetails.loginId == customerId && inputDetails.password == customerPass)
+            foreach (var eachUser in userData.userList)
             {
-                return RedirectToAction("customerIndex", "Customer", new { name = "Bob" });
-            }
-            foreach (var eachUser in userList)
-            {
-                if (eachUser.email == inputDetails.loginId && inputDetails.password == eachUser.password)
+                if (eachUser.email == inputDetails.loginId && eachUser.password == inputDetails.password )
                 {
-                    return RedirectToAction("customerIndex", "Customer", new {name= eachUser.name });
+                    currentUser.email = eachUser.email;
+                    currentUser.name = eachUser.name;
+                    currentUser.role = eachUser.role;
+                    if (eachUser.role == "admin")
+                    {
+                        return RedirectToAction("adminIndex", "Admin", new { name = eachUser.name });
+                    }
+                    else
+                    {
+                        return RedirectToAction("customerIndex", "Customer", new { name = eachUser.name });
+                    }
                 }
             }
             ViewBag.errorMessage = "Invalid LoginId or password. Try again...";
@@ -69,6 +64,14 @@ namespace WebApplication8.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult Logout()
+        {
+            currentUser.name = "";
+            currentUser.email = "";
+            currentUser.role = "";
             return View();
         }
 

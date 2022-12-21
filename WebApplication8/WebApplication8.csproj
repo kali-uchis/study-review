@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="JsonConverter.Abstractions" Version="0.3.0" />
+    <PackageReference Include="MySqlConnector" Version="2.2.2" />
+  </ItemGroup>
+
 </Project>

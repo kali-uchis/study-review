@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "18io249fbQJoS1QTXvHQS7oNb5hqPrppPFdw7FNVfTqGD+3CVNrTey4uBuSKVRtNHHJbktZEVm8oYUPjOENXNA==",
+  "dgSpecHash": "bWNuKiDLwHXr1t6rfET/60bH16FoUQXQUwputf7rN8ChPnjq2vUgx4/Kovdc/W3tRj5qgH91JejD2N4b4EMR+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\gopur\\source\\repos\\WebApplication8\\WebApplication8\\WebApplication8.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gopur\\.nuget\\packages\\jsonconverter.abstractions\\0.3.0\\jsonconverter.abstractions.0.3.0.nupkg.sha512",
+    "C:\\Users\\gopur\\.nuget\\packages\\mysqlconnector\\2.2.2\\mysqlconnector.2.2.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,11 +1,83 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "JsonConverter.Abstractions/0.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/JsonConverter.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/JsonConverter.Abstractions.dll": {}
+        }
+      },
+      "MySqlConnector/2.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "JsonConverter.Abstractions/0.3.0": {
+      "sha512": "TDD7k53th1CiDXWrJzqyLFkvYdIWPBmBnGtgSKsdtHpBQO2imVyzmHkid4N3ebYHF/Ap/T4+JiVNCXRG80iAIA==",
+      "type": "package",
+      "path": "jsonconverter.abstractions/0.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsonconverter.abstractions.0.3.0.nupkg.sha512",
+        "jsonconverter.abstractions.nuspec",
+        "lib/net35/JsonConverter.Abstractions.dll",
+        "lib/net40/JsonConverter.Abstractions.dll",
+        "lib/net45/JsonConverter.Abstractions.dll",
+        "lib/net461/JsonConverter.Abstractions.dll",
+        "lib/netstandard1.0/JsonConverter.Abstractions.dll",
+        "lib/netstandard2.0/JsonConverter.Abstractions.dll",
+        "lib/netstandard2.1/JsonConverter.Abstractions.dll"
+      ]
+    },
+    "MySqlConnector/2.2.2": {
+      "sha512": "rhy856Z1LrSblkC//OkvLIXBuiLhwlBAwDBrdHJEkIhu3eZRCQQg9sDNpt7eEVXtIFAMyEXkaky0bYpoGKps3g==",
+      "type": "package",
+      "path": "mysqlconnector/2.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net6.0/MySqlConnector.dll",
+        "lib/net6.0/MySqlConnector.xml",
+        "lib/net7.0/MySqlConnector.dll",
+        "lib/net7.0/MySqlConnector.xml",
+        "lib/netcoreapp3.1/MySqlConnector.dll",
+        "lib/netcoreapp3.1/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.2.2.2.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "JsonConverter.Abstractions >= 0.3.0",
+      "MySqlConnector >= 2.2.2"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\gopur\\.nuget\\packages\\": {}
@@ -45,6 +117,16 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "JsonConverter.Abstractions": {
+            "target": "Package",
+            "version": "[0.3.0, )"
+          },
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[2.2.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

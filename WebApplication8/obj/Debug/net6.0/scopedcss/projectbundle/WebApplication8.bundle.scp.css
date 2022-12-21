@@ -1,3 +1,101 @@
+/* _content/WebApplication8/Views/Shared/_AdminLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-rddxup9lds] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-rddxup9lds] {
+  color: #0077cc;
+}
+
+.btn-primary[b-rddxup9lds] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-rddxup9lds], .nav-pills .show > .nav-link[b-rddxup9lds] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-rddxup9lds] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-rddxup9lds] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-rddxup9lds] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-rddxup9lds] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-rddxup9lds] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/WebApplication8/Views/Shared/_CustomerLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-xrsq8u33uo] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-xrsq8u33uo] {
+  color: #0077cc;
+}
+
+.btn-primary[b-xrsq8u33uo] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-xrsq8u33uo], .nav-pills .show > .nav-link[b-xrsq8u33uo] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-xrsq8u33uo] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-xrsq8u33uo] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-xrsq8u33uo] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-xrsq8u33uo] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-xrsq8u33uo] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
 /* _content/WebApplication8/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

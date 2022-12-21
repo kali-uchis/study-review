@@ -29,3 +29,8 @@ C:\Users\gopur\source\repos\WebApplication8\WebApplication8\obj\Debug\net6.0\ref
 C:\Users\gopur\source\repos\WebApplication8\WebApplication8\obj\Debug\net6.0\WebApplication8.pdb
 C:\Users\gopur\source\repos\WebApplication8\WebApplication8\obj\Debug\net6.0\WebApplication8.genruntimeconfig.cache
 C:\Users\gopur\source\repos\WebApplication8\WebApplication8\obj\Debug\net6.0\ref\WebApplication8.dll
+C:\Users\gopur\source\repos\WebApplication8\WebApplication8\obj\Debug\net6.0\WebApplication8.csproj.CopyComplete
+C:\Users\gopur\source\repos\WebApplication8\WebApplication8\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\gopur\source\repos\WebApplication8\WebApplication8\obj\Debug\net6.0\scopedcss\Views\Shared\_AdminLayout.cshtml.rz.scp.css
+C:\Users\gopur\source\repos\WebApplication8\WebApplication8\obj\Debug\net6.0\scopedcss\Views\Shared\_CustomerLayout.cshtml.rz.scp.css
+C:\Users\gopur\source\repos\WebApplication8\WebApplication8\bin\Debug\net6.0\JsonConverter.Abstractions.dll
