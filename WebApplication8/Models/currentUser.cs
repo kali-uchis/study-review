@@ -143,4 +143,88 @@ public override int run(){
 why use abstract classes and methods: 
 *to achieve security by hiding certails and only show relevant details for some developers to work with
 
+
+
+
+
+4. interfaces: 
+*another way to achieve abstraction
+*
+*what is it?: 
+*It is a completely abstract class. But can only contain 
+*abstract methods and properties
+
+function eat() { // code }
+function abstract eat (); 
+
+public int i = 10;  --> works but must be public
+
+
+these types of variables can't be used in a interface:
+int i {get; set;}   <--- doesnt work cuz it means int i { if method == get, then return i, if method ==set, then update i}
+
+interface User{
+    abstract methods and properties
+
+} 
+
+abstract class -- > can have both abstract methods and non-abstract methods
+but interface --> only abstract methods and properties but not fields 
+
+
+naming convention: IName but the I not required just suggested
+ex: interface Iuser {
+    void run ();
+    void eat();
+
+}
+
+**important: if parent and child are both classes, then it inherits
+*
+* if parent is interface and child is class, then it implements
+
+class Admin : IUser {
+
+    public void run(){
+                 //console.write (...) any code   
+                }
+
+}
+
+Few things to note... 
+* - interfaces cannot be used to create objects 
+* e.g. 
+* 
+*  IUser obj1 = new Iuser(); does not work 
+*  
+*  - interface methods cannot have a body 
+*  - to implement the abstract methods inside interface, we have to override,
+*  however the override word is NOT required in the declaration. 
+* - interface members (prop + methods) are by default public and abstract 
+* - interface cannot contain a constructor
+* - why use interface? a. to achieve security, i.e. hide certain details 
+* b. We cannot achieve multiple inheritance using classes, 
+*   but we can achieve this using interfaces 
+*   
+*   
+*   Example for b: 
+*   
+*   class A { //code //run() } 
+*   
+*   Class B { //code //eat()} 
+*   
+*   Class C: A, B               <-- cannot do with classes alone (multiple inheritances)
+*   { //code } 
+*     
+*     - to achieve it we can use multiple interfaces:
+*     
+*     interface IA {//abstract run()}
+*     interface IB { //abstract eat ()}
+*     
+*     class C : IA, IB {
+*       run(){//code}
+*       eat(){//code}
+*     }
+*     
+
 */
