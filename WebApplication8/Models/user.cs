@@ -10,17 +10,17 @@ namespace WebApplication8.Models
 
         public string role { get; set; }
 
-        public enum roles
+        public enum roles                                      //makes a list u can pick one of (drop down)
         {
             admin,
             customer
         }
 
-        public user()
+        public user()      //constructor used to initialize variables
         {
 
         }
-
+        //method overloading
         public user(string name, string email, string password, string role)
         {
             this.name = name;

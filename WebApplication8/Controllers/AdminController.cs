@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MySqlConnector;
+using System.Runtime.InteropServices;
 using WebApplication8.Models;
 
 namespace WebApplication8.Controllers
@@ -16,13 +17,22 @@ namespace WebApplication8.Controllers
             return View();
         }
 
-        public  IActionResult ShowUsers()
+        public  IActionResult ShowUsers(string error = "")
         {
             //Database call to get the list of available users
             ViewBag.usersList = userData.userList;
+            ViewBag.error = error; 
+
             //Console.WriteLine(userData.userList);
             return View();
    
+        }
+
+        public IActionResult DeleteUser()
+        {
+
+            ViewBag.usersList = userData.userList;
+            return View();
         }
 
 

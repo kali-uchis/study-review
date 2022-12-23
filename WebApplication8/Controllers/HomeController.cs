@@ -72,8 +72,40 @@ namespace WebApplication8.Controllers
             currentUser.name = "";
             currentUser.email = "";
             currentUser.role = "";
-            return View();
+            return View("Logout");
         }
+
+        public IActionResult DeleteUser(user userEmail)
+        {
+            Console.WriteLine(userEmail);
+            foreach (var eachUser in userData.userList.ToList())
+            {
+                if (eachUser.email == userEmail.email)
+
+                {
+                    userData.userList.Remove(eachUser);
+                    
+
+                }
+
+                else 
+                {
+
+                    //ViewBag.newerrorMessage = "The user could not be found.";
+                    return RedirectToAction("ShowUsers", "Admin", new {error = "The user could not be found." });
+                }
+
+              
+
+            }
+
+            
+            return RedirectToAction ("ShowUsers","Admin");
+
+        }
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
