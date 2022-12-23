@@ -17,11 +17,20 @@ namespace WebApplication8.Controllers
             return View();
         }
 
-        public  IActionResult ShowUsers(string error = "")
+        public  IActionResult ShowUsers(string error ="")
         {
             //Database call to get the list of available users
             ViewBag.usersList = userData.userList;
-            ViewBag.error = error; 
+            
+            if(error != null)
+            {
+                RedirectToAction("UserError", "Admin");
+
+            }
+            else
+            {
+                return View();
+            }
 
             //Console.WriteLine(userData.userList);
             return View();
@@ -32,6 +41,14 @@ namespace WebApplication8.Controllers
         {
 
             ViewBag.usersList = userData.userList;
+            return View();
+        }
+
+        public IActionResult UserError()
+        {
+
+            ViewBag.usersList = userData.userList;
+            ViewBag.newerrorMessage = "the user was not found";
             return View();
         }
 

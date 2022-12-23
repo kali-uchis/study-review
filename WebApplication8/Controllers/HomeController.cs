@@ -77,6 +77,7 @@ namespace WebApplication8.Controllers
 
         public IActionResult DeleteUser(user userEmail)
         {
+            
             Console.WriteLine(userEmail);
             foreach (var eachUser in userData.userList.ToList())
             {
@@ -84,26 +85,46 @@ namespace WebApplication8.Controllers
 
                 {
                     userData.userList.Remove(eachUser);
-                    
+                    return RedirectToAction("ShowUsers", "Admin");
 
                 }
 
-                else 
+                else
                 {
 
-                    //ViewBag.newerrorMessage = "The user could not be found.";
-                    return RedirectToAction("ShowUsers", "Admin", new {error = "The user could not be found." });
-                }
+                    ViewBag.newerrorMessage = "The user could not be found.";
+                   
+                    //return RedirectToAction("ShowUsers", "Admin", new { error = "The user was not found." });
+                    //return View("ShowUsers");
 
-              
+                    //return RedirectToAction("ShowUsers", "Home");
+                }
+                
+
 
             }
 
-            
-            return RedirectToAction ("ShowUsers","Admin");
+            foreach (var eachUser in userData.userList.ToList())
+            {
+                if (eachUser.email != userEmail.email)
+
+                {
+                    return RedirectToAction("ShowUsers", "Home");
+                }
+
+
+            }
+
+                    return RedirectToAction ("ShowUsers","Admin");
 
         }
 
+
+        public IActionResult ShowUsers()
+        {
+            ViewBag.newerrorMessage = "The user could not be found.";
+            return View();
+        }
 
 
 
