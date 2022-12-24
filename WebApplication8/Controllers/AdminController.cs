@@ -53,6 +53,31 @@ namespace WebApplication8.Controllers
         }
 
 
+        public IActionResult AddShipment()
+        {
+            
+
+
+            return View();
+        }
+
+        public IActionResult CurrentShipment()
+        {
+            ViewBag.shipmentList = shipmentData.shipmentList;
+
+            return View();
+        }
+
+
+        public IActionResult DeleteShipment()
+        {
+
+            ViewBag.shipmentList = shipmentData.shipmentList;
+            return View();
+        }
+
+
+
 
     }
 }

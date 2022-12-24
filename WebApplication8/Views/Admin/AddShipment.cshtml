@@ -1,0 +1,14 @@
+﻿@{
+    @model WebApplication8.Models.examModel;
+
+    <form asp-action="AddShipment" asp-controller="Home" method="post">
+        Order Number:
+        @Html.TextAreaFor(u => u.orderNumberExam);
+        Customer Name:
+        @Html.TextAreaFor(u => u.customerExam);
+        Order Quantity
+        @Html.TextAreaFor(u => u.orderQuantityExam);
+     
+        <input type="submit" value="Submit" />
+    </form>
+}

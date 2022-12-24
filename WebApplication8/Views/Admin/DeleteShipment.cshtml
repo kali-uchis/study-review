@@ -1,0 +1,12 @@
+﻿@{
+    @model WebApplication8.Models.examModel;
+
+    <form asp-action="DeleteShipment" asp-controller="Home" method="post">
+
+        Order Number
+        @Html.TextAreaFor(u => u.orderNumberExam);
+
+
+        <input type="submit" value="Submit" />
+    </form>
+}

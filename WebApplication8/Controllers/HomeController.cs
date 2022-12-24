@@ -32,6 +32,14 @@ namespace WebApplication8.Controllers
             return RedirectToAction("ShowUsers", "Admin");
         }
 
+        public IActionResult AddShipment(examModel shipmentDetails)
+        {
+
+            shipmentData.shipmentList.Add(shipmentDetails);
+
+            return RedirectToAction("AddShipment", "Admin");
+        }
+
         public IActionResult Login()
         {
             return View("loginPage");
@@ -125,6 +133,57 @@ namespace WebApplication8.Controllers
             ViewBag.newerrorMessage = "The user could not be found.";
             return View();
         }
+
+        public IActionResult DeleteUser(shipmentData shipmentOrderNumber)
+        {
+
+
+            foreach (var eachexamModel in shipmentData.shipmentList.ToList())
+            {
+                if (eachexamModel.orderNumberExam == shipmentOrderNumber.orderNumberExam)
+
+                {
+                    shipmentData.shipmentList.Remove(eachexamModel);
+                    return RedirectToAction("CurrentShipment", "Admin");
+
+                }
+
+                else
+                {
+
+                    ViewBag.shipmenterrorMessage = "The shipment could not be found.";
+
+
+                }
+
+
+
+
+
+                return RedirectToAction("CurrentShipment", "Admin");
+            }
+
+            foreach (var eachexamModel in shipmentData.shipmentList.ToList())
+            {
+                if (eachexamModel.orderNumberExam != shipmentOrderNumber.orderNumberExam)
+
+                {
+                    return RedirectToAction("ErrorShipment", "Home");
+                }
+
+
+            }
+            
+            return RedirectToAction("CurrentShipment", "Admin");
+        }
+
+
+        public IActionResult ErrorShipment()
+        {
+            ViewBag.shipmenterrorMessage = "The shipment could not be found.";
+            return View();
+        }
+
 
 
 
